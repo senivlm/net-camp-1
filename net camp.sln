@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net camp", "net camp\net camp.csproj", "{EBF7C9FD-EC31-40B4-8A1F-3AB15B60F1AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net camp", "net camp\net camp.csproj", "{EBF7C9FD-EC31-40B4-8A1F-3AB15B60F1AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "matrixes", "matrixes\matrixes.csproj", "{BEA7707D-55F2-49C3-A823-54498984505D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{EBF7C9FD-EC31-40B4-8A1F-3AB15B60F1AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBF7C9FD-EC31-40B4-8A1F-3AB15B60F1AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBF7C9FD-EC31-40B4-8A1F-3AB15B60F1AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEA7707D-55F2-49C3-A823-54498984505D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEA7707D-55F2-49C3-A823-54498984505D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEA7707D-55F2-49C3-A823-54498984505D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEA7707D-55F2-49C3-A823-54498984505D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
