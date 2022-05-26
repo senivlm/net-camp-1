@@ -58,12 +58,10 @@ namespace matrixes
                         Console.Write("\n");
                     }
                     break;
+
                 case Filling.diagonal_right:
                     {
-                        Console.Write("n: ");
-                        int n = Int32.Parse(Console.ReadLine());
-                        Console.Write("m: ");
-                        int m = Int32.Parse(Console.ReadLine());
+                       
                         int count = n * m;
                         int[,] matrix = new int[n, m];
 
@@ -124,10 +122,6 @@ namespace matrixes
                     break;
                 case Filling.diagonal_down:
                     {
-                        Console.Write("n: ");
-                        int n = Int32.Parse(Console.ReadLine());
-                        Console.Write("m: ");
-                        int m = Int32.Parse(Console.ReadLine());
                         int count = n * m;
                         int[,] matrix = new int[n, m];
 
