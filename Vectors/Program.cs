@@ -16,19 +16,35 @@ namespace Vectors
             }
             Console.WriteLine("\nstreak:" + v.GetStreak(array));
 
-            int[] array_qs = { 67, 12, 95, 56, 85, 1, 100, 23, 60, 9 };
+            
             int n = 10, i;
             Console.WriteLine("Quick Sort");
-            Console.Write("Initial array is: ");
+
+            int[] array_qs0 = { 67, 12, 95, 56, 85, 1, 100, 23, 60, 9 };
+            Console.Write(", Initial array is: ");
             for (int y = 0; y < n; y++)
             {
-                Console.Write(array_qs[y] + " ");
+                Console.Write(array_qs0[y] + " ");
             }
-            v.quickSort(array_qs, 0, 9);
-            Console.Write("\nSorted Array is: ");
+            v.quickSort(array_qs0, 0, 9, 0);
+            Console.Write("\nFirst element, Sorted Array is: ");
             for (i = 0; i < n; i++)
             {
-                Console.Write(array_qs[i] + " ");
+                Console.Write(array_qs0[i] + " ");
+            }
+            int[] array_qs1 = { 67, 12, 95, 56, 85, 1, 100, 23, 60, 9 };
+            v.quickSort(array_qs1, 0, 9, 1);
+            Console.Write("\nMiddle element, Sorted Array is: ");
+            for (i = 0; i < n; i++)
+            {
+                Console.Write(array_qs1[i] + " ");
+            }
+            int[] array_qs2 = { 67, 12, 95, 56, 85, 1, 100, 23, 60, 9 };
+            v.quickSort(array_qs2, 0, 9, 2);
+            Console.Write("\nLast element, Sorted Array is: ");
+            for (i = 0; i < n; i++)
+            {
+                Console.Write(array_qs0[i] + " ");
             }
         }
         public class Vector
@@ -54,42 +70,56 @@ namespace Vectors
                 }
                 return reversed_array;
             }
-            public int Partition(int[] arr, int left, int right)
+            public int Partition(int[] arr, int max, int min, int pivot_position)
             {
-                int pivot;
-                pivot = arr[left];
+                int pivot = arr[max];
+
+                if (pivot_position==0)
+                {
+                    pivot = arr[min];
+                }
+                else if (pivot_position == 1)
+                {
+                    pivot = arr[(max+min)/2];
+                }
+                else if (pivot_position == 2)
+                {
+                    pivot = arr[max];
+                }
                 while (true)
                 {
-                    while (arr[left] < pivot){left++;}
-                    while (arr[right] > pivot){right--;}
-                    if (left < right)
+                    while (arr[max] < pivot){max++;}
+                    while (arr[min] > pivot){min--;}
+                    if (max < min)
                     {
-                        int temp = arr[right];
-                        arr[right] = arr[left];
-                        arr[left] = temp;
+                        int temp = arr[min];
+                        arr[min] = arr[max];
+                        arr[max] = temp;
                     }
                     else
                     {
-                        return right;
+                        return min;
                     }
                 }
             }
-            public void quickSort(int[] arr, int left, int right)
+            public void quickSort(int[] arr, int left, int right, int pivot_position)
             {
                 int pivot;
                 if (left < right)
                 {
-                    pivot = Partition(arr, left, right);
+                    pivot = Partition(arr, left, right, pivot_position);
                     if (pivot > 1)
                     {
-                        quickSort(arr, left, pivot - 1);
+                        quickSort(arr, left, pivot - 1, pivot_position);
                     }
                     if (pivot + 1 < right)
                     {
-                        quickSort(arr, pivot + 1, right);
+                        quickSort(arr, pivot + 1, right, pivot_position);
                     }
                 }
             }
+
+
             public int GetStreak(int[] array)
             {
                 int max_streak = 1;
