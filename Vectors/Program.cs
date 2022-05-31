@@ -101,7 +101,7 @@ namespace Vectors
                         return min;
                     }
                 }
-            }
+            }//Можна ще задати напрям сортування
             public void quickSort(int[] arr, int left, int right, int pivot_position)
             {
                 int pivot;
