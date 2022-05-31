@@ -4,7 +4,7 @@ using System;
 namespace net_camp
 {
     internal class Program
-    {
+    {//реорганізувати структуру папок!!!
         static void Main(string[] args)
         {
             Storage storage = new Storage();
