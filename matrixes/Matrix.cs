@@ -45,7 +45,7 @@ namespace matrixes
                                 }
                             }
                         }
-
+//Неправильно друк задавати в цьому методі
                         Console.WriteLine("A" + ": ");
                         for (int i = 0; i < n; ++i)
                         {
@@ -58,7 +58,7 @@ namespace matrixes
                         Console.Write("\n");
                     }
                     break;
-
+//Повтори коду, яких слід уникнути алгоритмічно
                 case Filling.diagonal_right:
                     {
                        
@@ -78,6 +78,7 @@ namespace matrixes
                             {
                                 deltaX = 1;
                                 deltaY = 0;
+                                //слід уникати
                                 continue;
                             }
                             if (x == 0 && deltaX == -1 && deltaY == 1 && y != m - 1)
@@ -204,6 +205,7 @@ namespace matrixes
                         }
 
                         m = MM.GetLength(1);
+                        // Теж друк лишній
                         for (int k = 0; k < l; k++)
                             Console.Write("{0}{1,3}", k % m == 0 ? "\n" : "", MM[k / m, k % m]);
 
